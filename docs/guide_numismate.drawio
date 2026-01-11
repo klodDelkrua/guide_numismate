@@ -1,0 +1,148 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="2TAZN7HcRGLxF8_CQUkY">
+    <mxGraphModel dx="2413" dy="804" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Database : guide_numismate&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="70" width="260" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-2" value="Country" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="420" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-3" value="+ country_id PK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-2">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-4" value="+ name : VARCHAR" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-2">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-5" value="+ code_iso VARCHAR(3) UNIQUE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-2">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-6" value="Coin" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="290" width="190" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-7" value="+ coin_id : PK&lt;div&gt;+ country_id : FK&lt;/div&gt;&lt;div&gt;+ face_value : VARCHAR&lt;/div&gt;&lt;div&gt;+ currency_unit : varchar&lt;/div&gt;&lt;div&gt;+ metal_title : varchar&lt;/div&gt;&lt;div&gt;+ diameter_mm : numeric&lt;/div&gt;&lt;div&gt;+ weight_g : numeric&lt;/div&gt;&lt;div&gt;+ shape : varchar&lt;/div&gt;&lt;div&gt;+ edge_description : varchar&lt;/div&gt;&lt;div&gt;+ obverse_description : TEXT&lt;/div&gt;&lt;div&gt;+ reverse_description : text&lt;/div&gt;&lt;div&gt;+ general_note : text&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-6">
+          <mxGeometry y="26" width="190" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-10" value="Variety" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="760" width="210" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-11" value="+ variety_id : PK&lt;div&gt;+ coin_id : FK&lt;/div&gt;&lt;div&gt;+ mintage_year : integer&lt;/div&gt;&lt;div&gt;+ mint_mark : varchar&lt;/div&gt;&lt;div&gt;+ total_mintage : bigint&lt;/div&gt;&lt;div&gt;+ specific_variety_note : varchar&lt;/div&gt;&lt;div&gt;+ finish_type : varchar&lt;/div&gt;&lt;div&gt;+ catalogue_reference : varchar&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-10">
+          <mxGeometry y="26" width="210" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-14" value="Copy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="640" width="160" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-15" value="+ copy_id : PK&lt;div&gt;+ variety_id : FK&lt;/div&gt;&lt;div&gt;+ grading_condition : varchar&lt;/div&gt;&lt;div&gt;+ purchase_date : date&lt;/div&gt;&lt;div&gt;+ purchase_price : numeric&lt;/div&gt;&lt;div&gt;+ purchase_currency : varchar&lt;/div&gt;&lt;div&gt;+ seller_source : varchar&lt;/div&gt;&lt;div&gt;+ physical_location : varchar&lt;/div&gt;&lt;div&gt;+ estimated_value : numeric&lt;/div&gt;&lt;div&gt;+ personal_comment : text&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-14">
+          <mxGeometry y="26" width="160" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-19" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=1.003;entryY=0.458;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.025;exitY=0.151;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iAX1Sla_ytptl3eeYFNk-4" target="iAX1Sla_ytptl3eeYFNk-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="430" as="sourcePoint" />
+            <mxPoint x="640" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-20" value="possede un pays de provenance&amp;nbsp;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-21" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.488;entryY=1.007;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.485;exitY=-0.021;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iAX1Sla_ytptl3eeYFNk-10" target="iAX1Sla_ytptl3eeYFNk-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="710" as="sourcePoint" />
+            <mxPoint x="610" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-22" value="a une&amp;nbsp;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="620" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-23" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.402;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="iAX1Sla_ytptl3eeYFNk-15" target="iAX1Sla_ytptl3eeYFNk-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="700" as="sourcePoint" />
+            <mxPoint x="320" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-24" value="a une&amp;nbsp;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="770" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-25" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Diagramme d&#39;objet&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1210" width="430" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-26" value="Country" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="1520" width="280" height="114" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-27" value="+ id : int&lt;div&gt;+ name : string&lt;/div&gt;&lt;div&gt;+ code_iso : string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-26">
+          <mxGeometry y="26" width="280" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-26">
+          <mxGeometry y="80" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-29" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-26">
+          <mxGeometry y="88" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-30" value="Coin" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1470" width="280" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-31" value="+ country_id : int&lt;div&gt;+ face_value :string&lt;/div&gt;&lt;div&gt;+ currency_unit : string&lt;/div&gt;&lt;div&gt;+ metal_title : string&lt;/div&gt;&lt;div&gt;+ diameter_mm : float&lt;/div&gt;&lt;div&gt;+ weight_g : float&lt;/div&gt;&lt;div&gt;+ shape : string&lt;/div&gt;&lt;div&gt;+ edge_description : string&lt;/div&gt;&lt;div&gt;+ obverse_desc : string&lt;/div&gt;&lt;div&gt;+ reverse_desc : string&lt;/div&gt;&lt;div&gt;+ general_note : string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-30">
+          <mxGeometry y="26" width="280" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-32" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-30">
+          <mxGeometry y="200" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-33" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-30">
+          <mxGeometry y="208" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-34" value="Variety" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1490" width="310" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-35" value="+ id : int&lt;div&gt;+ coin_id : int&lt;/div&gt;&lt;div&gt;+ mintage_year : int&lt;/div&gt;&lt;div&gt;+ mint_mark : string&lt;/div&gt;&lt;div&gt;+ total_mintage : long long&lt;/div&gt;&lt;div&gt;+ specific_variety_note : string&lt;/div&gt;&lt;div&gt;+ finish_type : string&lt;/div&gt;&lt;div&gt;+ catalogue_reference : string&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-34">
+          <mxGeometry y="26" width="310" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-36" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-34">
+          <mxGeometry y="160" width="310" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-37" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-34">
+          <mxGeometry y="168" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-38" value="Copy" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="1460" width="370" height="214" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-39" value="+ id : int&lt;div&gt;+ variety_id : int&lt;/div&gt;&lt;div&gt;+ grading_condition : string&lt;/div&gt;&lt;div&gt;+ physical_location : string&lt;/div&gt;&lt;div&gt;+ purchase_date : string&lt;/div&gt;&lt;div&gt;+ purchase_price : int&lt;/div&gt;&lt;div&gt;+ purchase_currency : string&lt;/div&gt;&lt;div&gt;+ seller_source : string&lt;/div&gt;&lt;div&gt;+ estimated_value : int&lt;/div&gt;&lt;div&gt;+ personal_comment : string&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-38">
+          <mxGeometry y="26" width="370" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-40" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-38">
+          <mxGeometry y="180" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-41" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="iAX1Sla_ytptl3eeYFNk-38">
+          <mxGeometry y="188" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-44" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.998;exitY=0.693;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="iAX1Sla_ytptl3eeYFNk-27" target="iAX1Sla_ytptl3eeYFNk-31">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-190" y="1630" as="sourcePoint" />
+            <mxPoint x="-30" y="1630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-45" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="iAX1Sla_ytptl3eeYFNk-31" target="iAX1Sla_ytptl3eeYFNk-35">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="400" y="1576" as="sourcePoint" />
+            <mxPoint x="560" y="1576" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-46" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.018;entryY=0.617;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="iAX1Sla_ytptl3eeYFNk-35" target="iAX1Sla_ytptl3eeYFNk-39">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1000" y="1600" as="sourcePoint" />
+            <mxPoint x="1160" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-47" value="un pays emet" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="1540" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-48" value="a plusieurs" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1552" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iAX1Sla_ytptl3eeYFNk-49" value="a une plusieurs exemplaires" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="1540" width="140" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,124 @@
+# Environnements virtuels
+venv/
+env/
+ENV/
+.venv/
+pythonenv*
+.env/
+
+# Bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+pip-wheel-metadata/
+share/python-wheels/
+
+# Installateurs PyInstaller
+*.exe
+*.msi
+*.dmg
+*.app
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.pytest.coverage
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environnements IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers spécifiques PyCharm
+.idea/
+.idea/*.xml
+.idea/*.iml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/inspectionProfiles/
+.idea/runConfigurations/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/shelf/
+.idea/dictionaries/
+
+# Cache PyCharm
+.idea/.gitignore
+.idea/caches/
+.idea/codeStyles/
+.idea/libraries/
+
+# Fichiers temporaires PyCharm
+*.iws
+*.ipr
+
+# Fichiers de configuration personnels
+*.orig
+
+# Fichiers de données
+*.db
+*.sqlite3
+*.sqlite
+
+# Fichiers de logs
+*.log
+logs/
+
+# Fichiers de cache
+.cache/
+
+# Fichiers de système d'exploitation
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Fichiers temporaires
+*~
+~$*
+
+# Fichiers de déploiement
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Fichiers de configuration
+instance/
+.webassets-cache
+
+# Fichiers de sécurité
+secrets.py
+*.pem
+*.key
+*.cert
+
+# Fichiers de profilage
+.prof
