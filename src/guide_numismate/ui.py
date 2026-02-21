@@ -1,5 +1,4 @@
-from src.guide_numismate.numismate import NumismateRepository
-from func import *
+from logic import *
 
 def menu_1() -> int:
     print("\n--- Справочник нумизмата (Guide du Numismate) ---")
@@ -21,9 +20,9 @@ def menu_1() -> int:
 
     print(" 0. Quitter")
 
-    choice = int(input())
-    while choice < 1 or choice > 8:
-        choice = int(input())
+    choice = int(input("Choix : "))
+    while choice < 0 or choice > 8:
+        choice = int(input("Erreur de choix\nChoix : "))
     return choice
 
 def run_application(repository: NumismateRepository):
@@ -31,7 +30,23 @@ def run_application(repository: NumismateRepository):
     while running:
         choice = menu_1()
         match choice:
+            case 0:
+                print("Fin de session, Bye Bye")
+                running = False
             case 1:
                 print("Lancement de l'ajout d'un exemplaire...")
                 add_copy_workflow(repository)
-        pass
+            case 2:
+                update_copy_workflow(repository)
+            case 3:
+                delete_copy_workflow(repository)
+            case 4:
+                search_coin_workflow(repository)
+            case 5:
+                display_full_catalogue_workflow(repository)
+            case 6:
+                collection_summary_workflow(repository)
+            case 7:
+                grading_stats_workflow(repository)
+            case 8:
+                admin_reference_workflow(repository)
